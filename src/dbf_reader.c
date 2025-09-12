@@ -291,8 +291,8 @@ P_DBF* dbf_OpenFromMemory(unsigned char* buffer, size_t size) {
 static uint16_t dbf_ReadHeaderSize(FILE* input) {
     unsigned char rawHeader[2];
     
-    if (fseek(input, 8, SEEK_SET) != 0) return EXIT_SUCCESS;
-    if (fread(rawHeader, 2, 1, input) != 1) return EXIT_SUCCESS;
+    if (fseek(input, 8, SEEK_SET) != 0) return 0;
+    if (fread(rawHeader, 2, 1, input) != 1) return 0;
     
     return rawHeader[0] + (rawHeader[1] << 8);
 }
