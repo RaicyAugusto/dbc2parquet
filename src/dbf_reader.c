@@ -64,8 +64,6 @@ static int dbf_NumCols(P_DBF *p_dbf){
 		perror(_("In function dbf_NumCols(): "));
 		return -1;
 	}
-
-	return EXIT_SUCCESS;
 }
 
 
